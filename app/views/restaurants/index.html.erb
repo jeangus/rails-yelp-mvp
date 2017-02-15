@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+    <div class="row">
+    <% @restaurants.each_with_index do |restaurant, index| %>
+
+
+      <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <img class="card-img-top" src=<%="http://lorempixel.com/318/180/food/#{index + 1}/"%> alt=<%= restaurant.category %>>
+          <span class=<%= restaurant.category %>></span>
+          <div class="card-block">
+            <h4 class="card-title"><%= restaurant.name %></h4>
+            <p class="card-text"><%= restaurant.address %> - <%= restaurant.phone_number %></p>
+            <%= link_to 'En savoir plus', restaurant, class: "btn btn-primary" %>
+            <%= link_to '', edit_restaurant_path(restaurant), class: "glyphicon glyphicon-pencil" %>
+            <%= link_to '', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash" %>
+          </div>
+        </div>
+      </div>
+
+
+    <% end %>
+    </div>
+</table>
+
+

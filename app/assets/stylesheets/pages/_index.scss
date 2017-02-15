@@ -1,0 +1,16 @@
+@import "home";
+@import "contact";
+
+.banner {
+  position:relative;
+}
+
+.banner span {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px 4px rgba(150, 150, 150, 1);
+}

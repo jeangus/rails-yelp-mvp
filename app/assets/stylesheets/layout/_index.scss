@@ -1,0 +1,36 @@
+// @import "base";
+@import "utilities";
+@import "footer";
+@import "navbar";
+@import "sidebar";
+
+.card span {
+  width:24px;
+  height: 15px;
+  position: absolute;
+  right : 30px;
+  top: 15px;
+}
+
+span.belgian {
+  background: url(http://www.eppgroup.eu/sites/all/themes/eppgroup960gs/images/flag/flag_icon_be.gif);
+}
+
+span.french {
+  background: url(http://www.eppgroup.eu/sites/all/themes/eppgroup960gs/images/flag/flag_icon_fr.gif);
+}
+
+.glyphicon {
+  float: right;
+  padding: 10px;
+}
+
+.card {
+  width:100%;
+  padding:10px;
+}
+
+.card img {
+  width: 100%
+}
+

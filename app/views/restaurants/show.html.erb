@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="banner text-center">
+  <img src="http://lorempixel.com/1000/400/food/" style="width:100%">
+  <span><%= @restaurant.name %></span>
+</div>
+<br>
+
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @restaurant.phone_number %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @restaurant.category %>
+</p>
+
+<p><strong><%= @restaurant.reviews.count %> Review(s):</strong></p>
+
+<% @restaurant.reviews.each_with_index do |review, index| %>
+<p><%= index + 1 %> - <%= review.rating %>/5 - <%=  review.content %></p>
+<% end %>
+
+<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %> |
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>
